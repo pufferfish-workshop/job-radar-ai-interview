@@ -2,7 +2,6 @@
 
 import type { ChangeEvent } from 'react';
 import { TextAreaField, SelectField, TextField } from '@/components/form-controls';
-import { createVersionId } from '@/lib/profile-storage';
 import type { ProfileData, SectionId } from '@/lib/profile-types';
 
 interface ProfileEditorProps {
@@ -35,7 +34,11 @@ const yesNoOptions = [
 ];
 
 function createItemId(prefix: string): string {
-  return `${prefix}-${createVersionId()}`;
+  const id = typeof crypto !== 'undefined' && 'randomUUID' in crypto
+    ? crypto.randomUUID()
+    : `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+
+  return `${prefix}-${id}`;
 }
 
 function updateArrayItem<T extends { id: string }>(items: T[], id: string, patch: Partial<T>): T[] {
@@ -101,7 +104,7 @@ export function ProfileEditor({
           <div>
             <p className="eyebrow">Your professional details</p>
             <h1>Profile</h1>
-            <p className="page-subtitle">Keep one source of truth for every version of your resume.</p>
+            <p className="page-subtitle">Keep your professional profile accurate and ready to use.</p>
           </div>
         </div>
         {renderSection()}

@@ -1,14 +1,13 @@
 {
-  "name": "resume-version-manager",
+  "name": "resume-profile-editor",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack",
+    "dev": "next dev --webpack --hostname localhost --port 3009",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --hostname localhost --port 3009",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "16.2.6",
@@ -21,7 +20,6 @@
     "@types/react-dom": "19.2.3",
     "eslint": "^9.24.0",
     "eslint-config-next": "16.2.4",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.4"
+    "typescript": "^5.8.3"
   }
 }

@@ -58,18 +58,3 @@ export interface ProfileData {
   languages: string[];
   application: ApplicationQuestions;
 }
-
-export interface ResumeVersion {
-  id: string;
-  name: string;
-  createdAt: string;
-  schemaVersion: 1;
-  profile: ProfileData;
-}
-
-export interface ProfileChange {
-  section: string;
-  field: string;
-  currentValue: string;
-  selectedValue: string;
-}

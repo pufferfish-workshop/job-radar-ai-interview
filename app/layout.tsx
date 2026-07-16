@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Resume Studio',
-  description: 'A focused profile editor with local resume version history.',
+  description: 'A focused profile editor for professional and application details.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
