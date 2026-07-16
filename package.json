@@ -1,0 +1,25 @@
+{
+  "name": "resume-profile-editor",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack --hostname localhost --port 3009",
+    "build": "next build",
+    "start": "next start --hostname localhost --port 3009",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9.24.0",
+    "eslint-config-next": "16.2.4",
+    "typescript": "^5.8.3"
+  }
+}
